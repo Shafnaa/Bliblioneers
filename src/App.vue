@@ -6,15 +6,6 @@ import SecondLayout from "./components/SecondLayout.vue";
 import ThirdLayout from "./components/ThirdLayout.vue";
 import FourthLayout from "./components/FourthLayout.vue";
 import ProductContainer from "./components/ProductContainer.vue";
-
-const target = document.getElementById("app");
-
-function handleClick() {
-  target.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
 </script>
 
 <template>
@@ -30,7 +21,7 @@ function handleClick() {
     <FourthLayout />
   </main>
 
-  <button @click="handleClick">
+  <a href="#app">
     <svg
       height="24"
       width="24"
@@ -47,7 +38,7 @@ function handleClick() {
         fill="currentColor"
       />
     </svg>
-  </button>
+  </a>
 
   <Foot />
 </template>
@@ -57,8 +48,7 @@ main {
   gap: 2em;
 }
 
-a,
-button {
+a {
   width: 3em;
   height: 3em;
   position: fixed;
