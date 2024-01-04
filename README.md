@@ -36,23 +36,33 @@ Lazy load is a way to improve performance of an application by loading the more 
 
 ## Mention at least 5 git commands and describe each function of them!
 
-### git add
+```sh
+git add
+```
 
 used for adding changed file to the next commit
 
-### git commit
+```sh
+git commit
+```
 
 used for creating commit staged content as a new commit
 
-### git push
+```sh
+git push
+```
 
 used for sending local commit to a repository
 
-### git branch
+```sh
+git branch
+```
 
-used for showing list of branch and create a new branch
+used for showing list of branch and create a new branch if there is added parameter
 
-### git rebase
+```sh
+git rebase
+```
 
 adding changes from another branch so that the commit will be ahead of the specified.
 

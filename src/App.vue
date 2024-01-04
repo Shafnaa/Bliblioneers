@@ -6,7 +6,15 @@ import SecondLayout from "./components/SecondLayout.vue";
 import ThirdLayout from "./components/ThirdLayout.vue";
 import FourthLayout from "./components/FourthLayout.vue";
 import ProductContainer from "./components/ProductContainer.vue";
-import ChevronUp from "./components/icons/ChevronUp.vue";
+
+const target = document.getElementById("app");
+
+function handleClick() {
+  target.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
 </script>
 
 <template>
@@ -22,8 +30,8 @@ import ChevronUp from "./components/icons/ChevronUp.vue";
     <FourthLayout />
   </main>
 
-  <a href="#app"
-    ><svg
+  <button @click="handleClick">
+    <svg
       height="24"
       width="24"
       clip-rule="evenodd"
@@ -39,21 +47,18 @@ import ChevronUp from "./components/icons/ChevronUp.vue";
         fill="currentColor"
       />
     </svg>
-  </a>
+  </button>
 
   <Foot />
 </template>
-
-<script>
-
-</script>
 
 <style scoped>
 main {
   gap: 2em;
 }
 
-a {
+a,
+button {
   width: 3em;
   height: 3em;
   position: fixed;
@@ -62,6 +67,7 @@ a {
   align-items: center;
   color: var(--color-blue);
   background-color: var(--color-white);
+  border: none;
   border-radius: 100%;
   bottom: 4em;
   right: 4em;
